@@ -1,0 +1,12 @@
+html
+  head 
+    title= title
+    link(rel="stylesheet", href="stylesheets/style.css")
+  body
+    form(method="POST" action="/new")
+        label(for="authorName") Author
+        input(type="text" id="authorName" name="authorName" required)
+        label(for="messageBody") Message
+        input(type="text" id="messageBody" name="messageBody" required)
+        button(type="submit") Submit
+    a(href="/") Back to home

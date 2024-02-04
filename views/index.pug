@@ -1,0 +1,15 @@
+html
+  head 
+    title= title
+    link(rel="stylesheet", href="stylesheets/style.css")
+  body
+    if messages.length == 0
+      h1  There are no messages to display
+    else
+      ul
+        each item in messages 
+          h2 #{item.user}
+          p  #{item.text}
+          span #{item.added}
+          hr
+    a(href="/new") New Message
